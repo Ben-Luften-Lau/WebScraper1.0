@@ -3,14 +3,14 @@ import selenium
 print("Loading")
 
 from selenium import webdriver
-url = 'https://www.iproperty.com.my/sale/penang/all-residential/'
+url = '##Input URL##'
 driver = webdriver.Firefox(
-    executable_path=r'/home/northon_polaris/geckodriver'
+    executable_path=r'/##InputWeb Driver File Path##'
 )
 driver.get(url)
 driver.maximize_window()
 
-Price = driver.find_element_by_xpath('/html/body/div/div/div[3]/div/ul/li[1]/div/div/div[3]/div[1]/ul/li')
+Price = driver.find_element_by_xpath('##Xpath Location')
 matches = driver.find_elements_by_tag_name('li')
 for match in matches:
     print (match.text)
