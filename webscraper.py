@@ -29,7 +29,7 @@ for L_PricePSqft in range(len(PricePSqft)):
     PricePSqft_list.append(PricePSqft[L_PricePSqft].text)
 
 #   working well 25 May 2022 Wed 3:11PM
-#   get rid of () Price per sq feet data
+
 
 dList = list(zip(Listingprice_list, PricePSqft_list))
 List = pd.DataFrame(dList, columns=['Listing Price', 'Listing Price Per SQFeet'])
